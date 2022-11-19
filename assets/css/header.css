@@ -30,7 +30,7 @@
     flex: 1;
 
     &:after {
-      content: '';
+      content: "";
       background: repeating-linear-gradient(90deg, var(--accent), var(--accent) 2px, transparent 0, transparent 10px);
       display: block;
       width: 100%;
@@ -92,6 +92,35 @@
         li {
           margin: 0;
           padding: 5px;
+        }
+      }
+    }
+
+    &__sub-inner {
+      position: relative;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &:not(:only-child) {
+        margin-left: 20px;
+      }
+
+      &-more {
+        @mixin menu;
+        top: 35px;
+        left: 0;
+
+        &-trigger {
+          color: var(--accent);
+          user-select: none;
+          cursor: pointer;
+        }
+
+        li {
+          margin: 0;
+          padding: 5px;
+          white-space: nowrap;
         }
       }
     }

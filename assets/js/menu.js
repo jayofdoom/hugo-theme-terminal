@@ -5,6 +5,10 @@ const desktopMenu = document.querySelector(".menu__inner--desktop");
 const desktopMenuTrigger = document.querySelector(".menu__sub-inner-more-trigger");
 const menuMore = document.querySelector(".menu__sub-inner-more");
 const mobileQuery = getComputedStyle(document.body).getPropertyValue("--phoneWidth");
+
+const desktopPostsMenuTrigger = document.querySelector(".menu__sub-inner-more-trigger");
+const menuPostsMore = document.querySelector(".menu__sub-inner-more");
+
 const isMobile = () => window.matchMedia(mobileQuery).matches;
 const handleMenuClasses = () => {
   mobileMenuTrigger && mobileMenuTrigger.classList.toggle("hidden", !isMobile());
